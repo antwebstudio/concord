@@ -119,7 +119,7 @@ class Concord implements ConcordContract
     /**
      * @inheritDoc
      */
-    public function registerModel(string $abstract, string $concrete, $registerRouteModel = true)
+    public function registerModel(string $abstract, string $concrete, $registerRouteModel = false)
     {
         if (!is_subclass_of($concrete, $abstract, true)) {
             throw new InvalidArgumentException("Class {$concrete} must extend or implement {$abstract}. ");
